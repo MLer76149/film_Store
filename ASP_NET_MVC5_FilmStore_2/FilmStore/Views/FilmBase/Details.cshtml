@@ -1,0 +1,33 @@
+﻿
+@model FilmStore.Models.Filme
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Film: @Model.Title</h2>
+
+
+@{
+    foreach (var item in ViewBag.regisseure)
+    {
+        if (item.RegisseurId == Model.RegisseurId)
+        {
+            <h2>Director: @item.Name</h2>
+        }
+    }
+}
+
+@{
+    foreach (var item in ViewBag.genre)
+    {
+        if (item.GenreId == Model.GenreId)
+        {
+            <h2>Genre: @item.Name</h2>
+        }
+    }
+}
+
+<div>
+    <img src="@Model.FilmArtUrl" width="300" />
+</div>

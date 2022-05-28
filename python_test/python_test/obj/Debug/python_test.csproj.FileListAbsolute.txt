@@ -1,0 +1,7 @@
+C:\Users\micle\source\repos\python_test\python_test\bin\Debug\python_test.exe.config
+C:\Users\micle\source\repos\python_test\python_test\bin\Debug\python_test.exe
+C:\Users\micle\source\repos\python_test\python_test\bin\Debug\python_test.pdb
+C:\Users\micle\source\repos\python_test\python_test\obj\Debug\python_test.csproj.CoreCompileInputs.cache
+C:\Users\micle\source\repos\python_test\python_test\obj\Debug\python_test.exe
+C:\Users\micle\source\repos\python_test\python_test\obj\Debug\python_test.pdb
+C:\Users\micle\source\repos\python_test\python_test\obj\Debug\python_test.csproj.AssemblyReference.cache

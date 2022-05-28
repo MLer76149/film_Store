@@ -1,0 +1,30 @@
+﻿@model _01_MusicStore.Models.Album
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Album: @Model.Title</h2> 
+
+
+@{
+    foreach (var item in ViewBag.artist)
+    {
+        if (item.ArtistId == Model.ArtistId)
+        {
+            <h2>Künstler: @item.Name</h2>
+        }
+    }
+}
+
+@{
+    foreach (var item in ViewBag.genre)
+    {
+        if (item.GenreId == Model.GenreId)
+        {
+            <h2>Genre: @item.Name</h2>
+        }
+    }
+}
+

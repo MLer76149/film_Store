@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>@ViewBag.Title</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap" rel="stylesheet">
+    <link href="@Url.Content("~/Content/Site.css")"
+          rel="stylesheet" type="text/css" />
+
+    <script src="@Url.Content("~/Scripts/jquery-1.4.4.min.js")"
+            type="text/javascript"></script>
+</head>
+<body>
+    <div id="header">
+        <h1 style="display:flex">
+            <div>
+                @{
+                    if (ViewBag.Title == "Store")
+                    {
+                        <img src="~/Content/Images/yoda2.png" width="100" />
+                    }
+                    else if (ViewBag.Title == "Browse")
+                    {
+                        <img src="~/Content/Images/darth2.png" width="100" />
+                    }
+                    else if (ViewBag.Title == "Browse2")
+                    {
+                        <img src="~/Content/Images/r2d2.png" width="100" />
+                    }
+                    else
+                    {
+                        <img src="~/Content/Images/trooper.png" width="100" />
+                    }
+                }
+
+
+            </div>
+                <div style="margin: 10px">ASP.NET MVC Film STORE</div>
+        </h1>
+        <ul id="navlist">
+            <li class="first">
+                <a href="/"
+                   id="current">Home</a>
+            </li>
+            <li>
+                <a href="/Filmbase/">Store</a>
+            </li>
+            <li>
+                <a href="/Filmbase/LogIn">Login</a>
+            </li>
+        </ul>
+    </div>
+    @RenderBody()
+</body>
+</html>

@@ -1,0 +1,18 @@
+﻿@model FilmStore.Models.Regisseure
+
+@{
+    ViewBag.Title = "Browse2";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<h2>Browsing Director: @Model.Name</h2>
+<ul class="browseLook">
+    @foreach (var films in Model.Films)
+    {
+        <li>
+            @Html.ActionLink(films.Title,
+            "Details", new { id = films.FilmId })
+        </li>
+    }
+</ul>

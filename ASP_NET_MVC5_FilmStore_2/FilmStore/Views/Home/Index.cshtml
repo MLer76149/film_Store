@@ -1,0 +1,74 @@
+﻿@model IEnumerable<FilmStore.Models.Filme>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Welcome to our Filmstore</h2>
+<br />
+@{
+    Random bilder = new Random();
+    int position = bilder.Next(1, Model.Count()+1);
+    int position1 = bilder.Next(1, Model.Count()+1);
+    int position2 = bilder.Next(1, Model.Count()+1);
+    if(position1 == position || position1 == position2)
+    {
+        position1 = position1 + 1;
+        if (position1 > Model.Count())
+        {
+            position1 = 1;
+        }
+    }
+    if (position2 == position || position2 == position1)
+    {
+        position2 = position2 + 1;
+        if (position2 > Model.Count())
+        {
+            position2 = 1;
+        }
+    }
+
+    <section class="gridpic">
+
+        @foreach (var item in Model)
+        {
+            if (item.FilmId == position)
+            {
+                <div><img src="@item.FilmArtUrl" width="200" /></div>
+            }
+        }
+
+        @foreach (var item in Model)
+        {
+            if (item.FilmId == position1)
+            {
+                <div><img src="@item.FilmArtUrl" width="200" /></div>
+            }
+        }
+
+        @foreach (var item in Model)
+        {
+            if (item.FilmId == position2)
+            {
+                <div><img src="@item.FilmArtUrl" width="200" /></div>
+            }
+        }
+
+    </section>
+}
+    
+
+
+@*<div class="loading-screen">
+        <a href="/Filmbase/LogIn">
+            <div class="loading">
+
+                <span style="font-size:25px; z-index:2; color: mediumspringgreen">LogIn</span>
+                <span></span>
+                <span></span>
+                <span></span>
+
+            </div>
+        </a>
+    </div>*@

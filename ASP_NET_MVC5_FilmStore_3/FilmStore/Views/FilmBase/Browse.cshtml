@@ -1,0 +1,19 @@
+﻿@model FilmStore.Models.Genres
+
+@{
+    ViewBag.Title = "Browse";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Browsing Genre: @Model.Name</h2>
+<ul class="browseLook">
+    @foreach (var films in Model.Films)
+    {
+        <li>
+            @Html.ActionLink(films.Title,
+            "Details", new { id = films.FilmId })
+        </li>
+    }
+</ul>
+
+
